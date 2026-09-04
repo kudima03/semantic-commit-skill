@@ -19,6 +19,27 @@ The skill runs `git diff --cached`, classifies the change as one of the conventi
 
 No scope or body is included. If nothing is staged, the skill reports that and does not commit.
 
+## How to Use
+
+1. Add the marketplace and install the plugin (once per machine):
+
+   ```
+   /plugin marketplace add kudima03/claude-plugins
+   /plugin install semantic-commit-skill@kudima03
+   ```
+
+2. Stage the changes you want to commit:
+
+   ```
+   git add <files>
+   ```
+
+3. Trigger the workflow either by:
+   - Running the command explicitly: `/semantic-commit`
+   - Or just asking Claude Code to commit your staged changes — the skill auto-triggers on requests like "commit this" or "create a semantic commit"
+
+4. Review the commit Claude Code created — it prints the result of `git log -1` and `git status` when done.
+
 ## Prerequisites
 
 - [Claude Code](https://claude.ai/code)
