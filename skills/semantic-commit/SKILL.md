@@ -31,8 +31,9 @@ Analyze the currently staged changes and create a semantic commit with an Englis
    - `perf`: Performance improvements
    - `ci`: CI/CD changes
    - `build`: Build system changes
-5. Execute the commit with the generated message
-6. Show the result with `git log -1` and `git status`
+5. Determine the commit author email with `git config user.email` — this resolves the repo-local value if set, otherwise the global value. Do not override it with any other email (e.g. one injected by the surrounding session/environment). If it prints nothing, tell the user to set one (`git config user.email "you@example.com"`, add `--global` for the global default) and do not commit.
+6. Execute the commit with the generated message using a plain `git commit -m "<type>: <subject>"` (no `-c user.email=...` override), so git resolves the author identity itself
+7. Show the result with `git log -1` and `git status`
 
 ## Important Notes
 
@@ -42,6 +43,7 @@ Analyze the currently staged changes and create a semantic commit with an Englis
 - Use lowercase for the first letter of the subject
 - Do NOT end the subject line with a period
 - If there are no staged changes, inform the user and do not commit
+- **Always author the commit with `git config user.email`** (local repo config, falling back to global) — never an email from the session/environment or any other source. A mismatched email is why GitHub marks a commit "Unverified" even when it's signed
 
 ## Examples
 
