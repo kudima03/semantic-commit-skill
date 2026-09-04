@@ -23,7 +23,3 @@ No scope or body is included. If nothing is staged, the skill reports that and d
 
 - [Claude Code](https://claude.ai/code)
 - `git` with staged changes in the target repo
-
-## License
-
-MIT
