@@ -1,0 +1,14 @@
+{
+  "name": "semantic-commit-skill",
+  "version": "0.1.0",
+  "description": "Analyze staged changes and create a semantic commit message following conventional commit standards.",
+  "homepage": "https://github.com/kudima03/semantic-commit-skill",
+  "repository": "https://github.com/kudima03/semantic-commit-skill",
+  "license": "MIT",
+  "category": "productivity",
+  "keywords": ["git", "commit", "semantic-commit", "conventional-commits", "changelog"],
+  "author": {
+    "name": "kudima03",
+    "email": "kudima03@gmail.com"
+  }
+}
